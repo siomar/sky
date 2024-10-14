@@ -1,0 +1,101 @@
+.section {
+  padding: 16px 0; }
+
+.content {
+  padding: 0 16px; }
+  @media only screen and (min-width: 768px) {
+    .content {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-inline: 0; } }
+  @media only screen and (min-width: 1200px) {
+    .content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 0; } }
+  @media only screen and (min-width: 1600px) {
+    .content {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding-inline: 0; } }
+
+.main .films {
+  margin: 20px auto; }
+  .main .films .title {
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    margin-bottom: 16px;
+    box-sizing: border-box; }
+  .main .films .categories {
+    margin-bottom: 32px; }
+    .main .films .categories .title {
+      transform: translateX(calc(100vw / 12));
+      width: 50%; }
+  .main .films .catalog {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    gap: 8px; }
+    @media only screen and (min-width: 768px) {
+      .main .films .catalog {
+        gap: 1rem; } }
+    .main .films .catalog-item {
+      cursor: pointer; }
+      .main .films .catalog-item:first-child {
+        width: 200px;
+        margin-left: calc(100vw / 12); }
+      .main .films .catalog-item:last-child {
+        margin-right: 200px; }
+  .main .films .banners {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    overflow-x: scroll; }
+    .main .films .banners-image {
+      border-radius: 4px;
+      box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.38); }
+    .main .films .banners-figure:first-child {
+      margin-left: calc(100vw / 12); }
+    .main .films .banners-figcaption {
+      display: none; }
+
+.main .figure {
+  width: 112px;
+  position: relative; }
+  .main .figure-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px; }
+  .main .figure-cart {
+    position: absolute;
+    top: 4px;
+    right: 4px; }
+  .main .figure-figcaption {
+    display: none; }
+
+.main .navigate {
+  margin-bottom: 10px; }
+  @media only screen and (max-width: 800px) {
+    .main .navigate {
+      display: none; } }
+  .main .navigate .indicator {
+    width: 20px;
+    height: 5px;
+    background-color: #8f969a;
+    border-radius: 10px;
+    cursor: pointer; }
+  .main .navigate .active {
+    background-color: #f35c58; }

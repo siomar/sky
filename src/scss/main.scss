@@ -1,0 +1,106 @@
+@import "colors.scss";
+@import "spaces.scss";
+@import "flexbox.scss";
+@import "./components/index.scss";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 120%;
+}
+
+summary::marker {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+details:not([open]){
+  summary:after {
+    content: "\f077";
+    float: left;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+    left: 20px;
+  }
+}
+details[open]{
+  summary:after {
+    content: "\f077";
+    float: left;
+    padding: 0;
+    text-align: center;
+    width: 20px;
+    left: 20px;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.nav-items {
+  width: 100%;
+  display: flex;
+  gap: 0;
+}
+
+
+a {
+  color: rgba(0, 0, 0, 0.6);
+}
+.navbar {
+  border-bottom: 1px solid rgba(80, 80, 80, 0.15);
+}
+.nav {
+  --bs-nav-link-color: $red;
+  --bs-nav-link-hover-color: $red;
+}
+.nav-underline .nav-link:hover {
+  color: $red;
+  border-bottom-color: $red;
+}
+
+.nav-items li {
+  flex: 1;
+  text-align: center;
+  --bs-nav-underline-link-active-color: $red;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -0px 4px 34px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: -0px 4px 34px 0px rgba(0, 0, 0, 0.75);
+}
+
+.tabs {
+  min-height: 48px;
+  display: flex;
+  align-items: flex-end;
+}
+
+

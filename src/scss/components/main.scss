@@ -1,0 +1,119 @@
+@import "../colors.scss";
+@import "../spaces.scss";
+
+.main {
+  .films {
+    margin: 20px auto;
+    .title {
+      font-family: Roboto;
+      font-size: 1rem;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      margin-bottom: 16px;
+
+      box-sizing: border-box;
+    }
+
+    .categories {
+      margin-bottom: 32px;
+
+      .title {
+        transform: translateX(calc(100vw / 12));
+        width: 50%;
+      }
+    }
+
+    .catalog {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      scroll-snap-type: x proximity;
+
+      gap: 8px;
+
+      @media only screen and (min-width: 768px) {
+        gap: 1rem;
+      }
+
+      &-item {
+        cursor: pointer;
+
+        &:first-child {
+          width: 200px;
+          margin-left: calc(100vw / 12);
+        }
+
+        &:last-child {
+          margin-right: 200px;
+        }
+      }
+    }
+
+    .banners {
+      width: 100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      overflow-y: hidden;
+      overflow-x: scroll;
+
+      &-image {
+        border-radius: 4px;
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.38);
+      }
+      &-figure {
+        &:first-child {
+          margin-left: calc(100vw / 12);
+        }
+      }
+      &-figcaption {
+        display: none;
+      }
+    }
+  }
+
+  .figure {
+    width: 112px;
+    position: relative;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    &-cart {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+
+    &-figcaption {
+      display: none;
+    }
+  }
+
+  .navigate {
+    margin-bottom: 10px;
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+
+    .indicator {
+      width: 20px;
+      height: 5px;
+      background-color: $background_gray;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .active {
+      background-color: $red;
+    }
+  }
+}

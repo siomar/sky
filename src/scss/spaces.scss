@@ -1,0 +1,28 @@
+$horizontal_space: 16px;
+
+.section {
+  padding: $horizontal_space 0;
+}
+.content {
+  padding: 0 $horizontal_space;
+
+  
+  @media only screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-inline: 0;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-inline: 0;
+  }
+  @media only screen and (min-width: 1600px) {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-inline: 0;
+  }
+}
